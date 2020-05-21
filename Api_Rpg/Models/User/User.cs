@@ -1,4 +1,6 @@
-﻿namespace Api_Rpg.Models.User
+﻿using System.Collections.Generic;
+
+namespace Api_Rpg.Models.User
 {
     public class User
     {
@@ -7,6 +9,6 @@
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
 
-        //public List<Character> Characters { get; set; }
+        public List<Character> Characters { get; set; }
     }
 }
