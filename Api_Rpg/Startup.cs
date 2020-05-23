@@ -1,6 +1,7 @@
 using System.Text;
 using Api_Rpg.Data;
 using Api_Rpg.Services.CharacterService;
+using Api_Rpg.Services.CharacterSkillService;
 using Api_Rpg.Services.WeaponService;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -49,6 +50,7 @@ namespace Api_Rpg
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<ICharacterService, CharacterService>();
             services.AddScoped<IWeaponService, WeaponService>();
+            services.AddScoped<ICharacterSkillService, CharacterSkillService>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
