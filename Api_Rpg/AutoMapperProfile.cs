@@ -1,4 +1,5 @@
 ﻿using Api_Rpg.Dtos.Character;
+using Api_Rpg.Dtos.Fight;
 using Api_Rpg.Models.User;
 using AutoMapper;
 using Microsoft.JSInterop.Infrastructure;
@@ -17,6 +18,7 @@ namespace Api_Rpg
             CreateMap<Character, GetCharacterDto>().ForMember(dto => dto.Skills, c => c.MapFrom(c => c.CharacterSkills.Select(cs => cs.Skill)));
             CreateMap<Weapon, GetWeaponDto>();
             CreateMap<Skill, GetSkillDto>();
+            CreateMap<Character, HighScoreDto>();
         }
     }
 }
